@@ -4,7 +4,8 @@
 using namespace std;
 
 int main() {
-	int ret = sayHello();
+    // test for notifications
+    int ret = sayHello();
     assert(ret == 0);
     return ret;
 }
