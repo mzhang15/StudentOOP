@@ -14,5 +14,3 @@ notifications:
     on_success: always
     on_failure: always  
   slack: nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj
-    on_success: always
-    on_failure: never
