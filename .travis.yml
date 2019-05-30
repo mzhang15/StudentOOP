@@ -8,15 +8,6 @@ script:
 
 
 notifications:
-<<<<<<< HEAD
-  slack: 
-    rooms:
-      - nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj
-    on_success: always
-    on_failure: never
-  
-=======
->>>>>>> testing new code
   email:
     recipients:
       - mengyzhang87@gmail.com
