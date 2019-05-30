@@ -8,10 +8,13 @@ script:
 
 
 notifications:
+  slack: 
+    rooms:
+      - nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj
+    on_success: always
+    on_failure: never
   email:
     recipients:
       - mengyzhang87@gmail.com
     on_success: always
     on_failure: always  
-  slack: nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj
-    on_failure: never
