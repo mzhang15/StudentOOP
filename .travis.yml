@@ -10,11 +10,10 @@ script:
 notifications:
   email:
     recipients:
-      - your_TAs_email@nyu.edu
-    on_success: always
-    on_failure: never
-
-    recipients:
-      - your_email@nyu.edu
+      - mengyzhang87@gmail.com
     on_success: always
     on_failure: always  
+  slack: 
+    nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj
+    on_success: always
+    on_failure: never
