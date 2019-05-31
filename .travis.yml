@@ -8,9 +8,9 @@ script:
 
 
 notifications:
-  slack: 
-    rooms:
-      - nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj
+  slack:
+    rooms: 
+      - nyuoop:Pt31RgSKx7T34S8fyZ4NI7tj #your_TA_slack_channel
     on_success: always
     on_failure: never
   email:
