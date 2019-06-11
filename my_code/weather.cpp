@@ -41,6 +41,7 @@ ostream& operator<<(ostream& os, const GPS& gps) {
 ostream& operator<<(ostream& os, const Weather& w) {
 	os << w.get_name() << ", " << w.get_rating() << ", " << w.my_loc;
 	return os;
+
 }
 
 void Weather::add_reading(WReading wr) { }
