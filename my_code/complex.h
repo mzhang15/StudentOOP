@@ -72,12 +72,12 @@ class Complex {
     Complex operator--(int dummy);
 
 
-    Complex operator-=(const Complex& c);
+    Complex& operator-=(const Complex& c);
 
     /*
      * Let's do multiplication by a scalar:
      * */
-    Complex operator*(const int i);
+    Complex& operator*(const int i);
 
  private:
     double real;
