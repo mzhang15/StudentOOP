@@ -16,14 +16,20 @@ Image::Image(int w, int h, std::string flnm)
 
 // copy constructor:
 Image::Image(const Image& img2) {
+    copy_fields(img2);
 }
 
 // destructor
 Image::~Image() {
+    delete [] image_buf;
 }
 
 // assignment operator:
 Image& Image::operator=(const Image& img2) {
+    if (this == &img2) return *this;
+    delete [] image_buf;
+    copy_fields(img2);
+    return *this;
 }
 
 int Image::image_sz() {
@@ -32,6 +38,14 @@ int Image::image_sz() {
 
 
 void Image::copy_fields(const Image& img2) {
+    width = img2.width;
+    height = img2.height;
+    filename = img2.filename;
+    image_buf = new char[image_sz()];
+
+    for (int i = 0; i < image_sz(); ++i) {
+        image_buf[i] = img2.image_buf[i];
+    }
 }
 
 
