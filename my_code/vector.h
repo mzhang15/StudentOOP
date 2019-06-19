@@ -12,8 +12,8 @@ class MyVec {
 
         void push_back(int val);
         int size() const { return sz; }
-        int operator[](int i) const;
-        int& operator[](int i);
+        int operator[](int i) const; // cout << v[i] << endl;
+        int& operator[](int i); // v[i] = 5；
     private:
         int* data;
         int sz;
@@ -23,4 +23,7 @@ class MyVec {
 
 void print_vector(const MyVec& v);
 
-bool operator==(MyVec& v1, MyVec& v2);
+bool operator==(const MyVec& v1, const MyVec& v2);
+
+
+// 
