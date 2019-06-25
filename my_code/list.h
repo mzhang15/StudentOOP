@@ -35,17 +35,35 @@ bool del_head(Node*& head);
 /*
  * Delete the last node and set prev->next to nullptr:
  * */
-bool del_tail(Node*& head);
+bool del_tail(Node*& head) {
+	if (!head->next) {
+		delete head;
+	}
+	return del_tail(head->next);
+}
 
+// if (!head) return nullptr;
+// 	return new Node(head->data, duplicate(head->next));
 /*
  * Duplicate the entire list -- you must not share memory!
  * */
-Node* duplicate(Node* head);
+Node* duplicate(Node* head) 
+	if (head == nulllptr) return nullptr;
+	
+	Node* new_curr = new Node(head->data) 
+	Node* new_rest = duplicate(head->next);
+	new_curr->next = new_rest;
+	return new_curr;
+}
 
 /*
  * Reverse the list: return a brand new list with everything reversed.
+ * new_next points to the next node in the new list after reversed the curr node
  * */
-Node* reverse(Node* curr, Node* new_next=nullptr);
+Node* reverse(Node* curr, Node* new_next=nullptr) {
+	if (!curr) return new_next;
+	reverse(curr->next, new Node(curr->data, new_next));
+}
 
 /*
  * Join two lists: tack list 2 onto the end of list 1:

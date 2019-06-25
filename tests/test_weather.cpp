@@ -46,15 +46,9 @@ void make_images2(Image& img1) {
 
 int main() {
 
-    /*
     Image img = Image(100, 100, fnm);
-<<<<<<< HEAD
-    for (int i = 1; i < 10000; i++) {
-        make_images1(img);
-=======
     for (int i = 1; i < 100; i++) {
         // make_images1(img);
->>>>>>> upstream/master
         make_images2(img);
     }
 
@@ -69,7 +63,6 @@ int main() {
     test_temps = WReading(Date(1, 1, 2019), 100, 50, 10);
     freezingF = test_temps.get_tempF();
     assert(freezingF == 212.0);
-    */
 
     Weather irkutsk = Weather("Irkutsk", GPS(46.3, 67.2));
 
